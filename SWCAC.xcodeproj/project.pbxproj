@@ -7,22 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		564ECC6A18D107E3006F9ABC /* UIWeb1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564ECC6918D107E3006F9ABC /* UIWeb1ViewController.m */; };
+		5652C7B418FEF8DE00F55DBA /* Main_iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5652C7B318FEF8DE00F55DBA /* Main_iPhone35.storyboard */; };
 		567B0A1218999E4C000B0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1118999E4C000B0833 /* Foundation.framework */; };
 		567B0A1418999E4C000B0833 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1318999E4C000B0833 /* CoreGraphics.framework */; };
 		567B0A1618999E4C000B0833 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1518999E4C000B0833 /* UIKit.framework */; };
 		567B0A1C18999E4C000B0833 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A1A18999E4C000B0833 /* InfoPlist.strings */; };
 		567B0A1E18999E4C000B0833 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A1D18999E4C000B0833 /* main.m */; };
 		567B0A2218999E4C000B0833 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2118999E4C000B0833 /* AppDelegate.m */; };
-		567B0A2518999E4C000B0833 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2318999E4C000B0833 /* Main_iPhone.storyboard */; };
+		567B0A2518999E4C000B0833 /* Main_iPhone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2318999E4C000B0833 /* Main_iPhone4.storyboard */; };
 		567B0A2818999E4C000B0833 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2618999E4C000B0833 /* Main_iPad.storyboard */; };
-		567B0A2B18999E4C000B0833 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2A18999E4C000B0833 /* FirstViewController.m */; };
-		567B0A2E18999E4C000B0833 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2D18999E4C000B0833 /* SecondViewController.m */; };
+		567B0A2B18999E4C000B0833 /* ConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2A18999E4C000B0833 /* ConferenceViewController.m */; };
+		567B0A2E18999E4C000B0833 /* CampusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2D18999E4C000B0833 /* CampusViewController.m */; };
 		567B0A3018999E4C000B0833 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2F18999E4C000B0833 /* Images.xcassets */; };
 		567B0A3718999E4C000B0833 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A3618999E4C000B0833 /* XCTest.framework */; };
 		567B0A3818999E4C000B0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1118999E4C000B0833 /* Foundation.framework */; };
 		567B0A3918999E4C000B0833 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1518999E4C000B0833 /* UIKit.framework */; };
 		567B0A4118999E4C000B0833 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A3F18999E4C000B0833 /* InfoPlist.strings */; };
 		567B0A4318999E4C000B0833 /* SWCACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A4218999E4C000B0833 /* SWCACTests.m */; };
+		567B0A5E1899B58C000B0833 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2F18999E4C000B0833 /* Images.xcassets */; };
+		567B0A601899B698000B0833 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A5F1899B698000B0833 /* MapKit.framework */; };
+		567B0A661899C855000B0833 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A651899C855000B0833 /* MapViewController.m */; };
+		5693B19318FC4F2000B25AA2 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5693B19218FC4F2000B25AA2 /* HotelViewController.m */; };
+		56C902F818F48A8400F98D98 /* UIViewControllerLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C902F718F48A8400F98D98 /* UIViewControllerLinks.m */; };
+		56FAB3011899E947009274A8 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FAB3001899E947009274A8 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		564ECC6818D107E3006F9ABC /* UIWeb1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWeb1ViewController.h; sourceTree = "<group>"; };
+		564ECC6918D107E3006F9ABC /* UIWeb1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWeb1ViewController.m; sourceTree = "<group>"; };
+		5652C7B318FEF8DE00F55DBA /* Main_iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone35.storyboard; sourceTree = "<group>"; };
 		567B0A0E18999E4C000B0833 /* SWCAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWCAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B0A1118999E4C000B0833 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		567B0A1318999E4C000B0833 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,18 +57,27 @@
 		567B0A1F18999E4C000B0833 /* SWCAC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SWCAC-Prefix.pch"; sourceTree = "<group>"; };
 		567B0A2018999E4C000B0833 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		567B0A2118999E4C000B0833 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		567B0A2418999E4C000B0833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		567B0A2418999E4C000B0833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone4.storyboard; sourceTree = "<group>"; };
 		567B0A2718999E4C000B0833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		567B0A2918999E4C000B0833 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		567B0A2A18999E4C000B0833 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		567B0A2C18999E4C000B0833 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		567B0A2D18999E4C000B0833 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		567B0A2918999E4C000B0833 /* ConferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConferenceViewController.h; sourceTree = "<group>"; };
+		567B0A2A18999E4C000B0833 /* ConferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceViewController.m; sourceTree = "<group>"; };
+		567B0A2C18999E4C000B0833 /* CampusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CampusViewController.h; sourceTree = "<group>"; };
+		567B0A2D18999E4C000B0833 /* CampusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampusViewController.m; sourceTree = "<group>"; };
 		567B0A2F18999E4C000B0833 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		567B0A3518999E4C000B0833 /* SWCACTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWCACTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B0A3618999E4C000B0833 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		567B0A3E18999E4C000B0833 /* SWCACTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SWCACTests-Info.plist"; sourceTree = "<group>"; };
 		567B0A4018999E4C000B0833 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		567B0A4218999E4C000B0833 /* SWCACTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCACTests.m; sourceTree = "<group>"; };
+		567B0A5F1899B698000B0833 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		567B0A641899C855000B0833 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		567B0A651899C855000B0833 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5693B19118FC4F2000B25AA2 /* HotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelViewController.h; sourceTree = "<group>"; };
+		5693B19218FC4F2000B25AA2 /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
+		56C902F618F48A8400F98D98 /* UIViewControllerLinks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerLinks.h; sourceTree = "<group>"; };
+		56C902F718F48A8400F98D98 /* UIViewControllerLinks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerLinks.m; sourceTree = "<group>"; };
+		56FAB2FF1899E947009274A8 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		56FAB3001899E947009274A8 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +87,7 @@
 			files = (
 				567B0A1418999E4C000B0833 /* CoreGraphics.framework in Frameworks */,
 				567B0A1618999E4C000B0833 /* UIKit.framework in Frameworks */,
+				567B0A601899B698000B0833 /* MapKit.framework in Frameworks */,
 				567B0A1218999E4C000B0833 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +127,7 @@
 		567B0A1018999E4C000B0833 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				567B0A5F1899B698000B0833 /* MapKit.framework */,
 				567B0A1118999E4C000B0833 /* Foundation.framework */,
 				567B0A1318999E4C000B0833 /* CoreGraphics.framework */,
 				567B0A1518999E4C000B0833 /* UIKit.framework */,
@@ -119,12 +141,10 @@
 			children = (
 				567B0A2018999E4C000B0833 /* AppDelegate.h */,
 				567B0A2118999E4C000B0833 /* AppDelegate.m */,
-				567B0A2318999E4C000B0833 /* Main_iPhone.storyboard */,
+				567B0A2318999E4C000B0833 /* Main_iPhone4.storyboard */,
+				5652C7B318FEF8DE00F55DBA /* Main_iPhone35.storyboard */,
 				567B0A2618999E4C000B0833 /* Main_iPad.storyboard */,
-				567B0A2918999E4C000B0833 /* FirstViewController.h */,
-				567B0A2A18999E4C000B0833 /* FirstViewController.m */,
-				567B0A2C18999E4C000B0833 /* SecondViewController.h */,
-				567B0A2D18999E4C000B0833 /* SecondViewController.m */,
+				56C902F518F4867C00F98D98 /* Controllers */,
 				567B0A2F18999E4C000B0833 /* Images.xcassets */,
 				567B0A1818999E4C000B0833 /* Supporting Files */,
 			);
@@ -158,6 +178,27 @@
 				567B0A3F18999E4C000B0833 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56C902F518F4867C00F98D98 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				567B0A2918999E4C000B0833 /* ConferenceViewController.h */,
+				567B0A2A18999E4C000B0833 /* ConferenceViewController.m */,
+				567B0A2C18999E4C000B0833 /* CampusViewController.h */,
+				567B0A2D18999E4C000B0833 /* CampusViewController.m */,
+				567B0A641899C855000B0833 /* MapViewController.h */,
+				567B0A651899C855000B0833 /* MapViewController.m */,
+				56FAB2FF1899E947009274A8 /* TableViewController.h */,
+				56FAB3001899E947009274A8 /* TableViewController.m */,
+				564ECC6818D107E3006F9ABC /* UIWeb1ViewController.h */,
+				564ECC6918D107E3006F9ABC /* UIWeb1ViewController.m */,
+				56C902F618F48A8400F98D98 /* UIViewControllerLinks.h */,
+				56C902F718F48A8400F98D98 /* UIViewControllerLinks.m */,
+				5693B19118FC4F2000B25AA2 /* HotelViewController.h */,
+				5693B19218FC4F2000B25AA2 /* HotelViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +245,16 @@
 		567B0A0618999E4C000B0833 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Charles Humphreys";
 				TargetAttributes = {
+					567B0A0D18999E4C000B0833 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					567B0A3418999E4C000B0833 = {
 						TestTargetID = 567B0A0D18999E4C000B0833;
 					};
@@ -238,8 +286,9 @@
 			files = (
 				567B0A2818999E4C000B0833 /* Main_iPad.storyboard in Resources */,
 				567B0A3018999E4C000B0833 /* Images.xcassets in Resources */,
-				567B0A2518999E4C000B0833 /* Main_iPhone.storyboard in Resources */,
+				567B0A2518999E4C000B0833 /* Main_iPhone4.storyboard in Resources */,
 				567B0A1C18999E4C000B0833 /* InfoPlist.strings in Resources */,
+				5652C7B418FEF8DE00F55DBA /* Main_iPhone35.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				567B0A4118999E4C000B0833 /* InfoPlist.strings in Resources */,
+				567B0A5E1899B58C000B0833 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				567B0A2E18999E4C000B0833 /* SecondViewController.m in Sources */,
+				56C902F818F48A8400F98D98 /* UIViewControllerLinks.m in Sources */,
+				567B0A2E18999E4C000B0833 /* CampusViewController.m in Sources */,
+				56FAB3011899E947009274A8 /* TableViewController.m in Sources */,
+				5693B19318FC4F2000B25AA2 /* HotelViewController.m in Sources */,
 				567B0A2218999E4C000B0833 /* AppDelegate.m in Sources */,
-				567B0A2B18999E4C000B0833 /* FirstViewController.m in Sources */,
+				564ECC6A18D107E3006F9ABC /* UIWeb1ViewController.m in Sources */,
+				567B0A661899C855000B0833 /* MapViewController.m in Sources */,
+				567B0A2B18999E4C000B0833 /* ConferenceViewController.m in Sources */,
 				567B0A1E18999E4C000B0833 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,12 +347,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		567B0A2318999E4C000B0833 /* Main_iPhone.storyboard */ = {
+		567B0A2318999E4C000B0833 /* Main_iPhone4.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				567B0A2418999E4C000B0833 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
+			name = Main_iPhone4.storyboard;
 			sourceTree = "<group>";
 		};
 		567B0A2618999E4C000B0833 /* Main_iPad.storyboard */ = {
@@ -323,7 +378,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -363,7 +417,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -422,7 +475,6 @@
 		567B0A4A18999E4C000B0833 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SWCAC.app/SWCAC";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -445,7 +497,6 @@
 		567B0A4B18999E4C000B0833 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SWCAC.app/SWCAC";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -480,6 +531,7 @@
 				567B0A4818999E4C000B0833 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		567B0A4918999E4C000B0833 /* Build configuration list for PBXNativeTarget "SWCACTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +540,7 @@
 				567B0A4B18999E4C000B0833 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
