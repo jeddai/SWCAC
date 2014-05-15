@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563965F91925207E007DE160 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563965F81925207E007DE160 /* ModalViewController.m */; };
 		564ECC6A18D107E3006F9ABC /* UIWeb1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564ECC6918D107E3006F9ABC /* UIWeb1ViewController.m */; };
-		5652C7B418FEF8DE00F55DBA /* Main_iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5652C7B318FEF8DE00F55DBA /* Main_iPhone35.storyboard */; };
 		567B0A1218999E4C000B0833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1118999E4C000B0833 /* Foundation.framework */; };
 		567B0A1418999E4C000B0833 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1318999E4C000B0833 /* CoreGraphics.framework */; };
 		567B0A1618999E4C000B0833 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567B0A1518999E4C000B0833 /* UIKit.framework */; };
 		567B0A1C18999E4C000B0833 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A1A18999E4C000B0833 /* InfoPlist.strings */; };
 		567B0A1E18999E4C000B0833 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A1D18999E4C000B0833 /* main.m */; };
 		567B0A2218999E4C000B0833 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2118999E4C000B0833 /* AppDelegate.m */; };
-		567B0A2518999E4C000B0833 /* Main_iPhone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2318999E4C000B0833 /* Main_iPhone4.storyboard */; };
+		567B0A2518999E4C000B0833 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2318999E4C000B0833 /* Main_iPhone.storyboard */; };
 		567B0A2818999E4C000B0833 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567B0A2618999E4C000B0833 /* Main_iPad.storyboard */; };
 		567B0A2B18999E4C000B0833 /* ConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2A18999E4C000B0833 /* ConferenceViewController.m */; };
 		567B0A2E18999E4C000B0833 /* CampusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567B0A2D18999E4C000B0833 /* CampusViewController.m */; };
@@ -44,9 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		563965F71925207E007DE160 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		563965F81925207E007DE160 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		564ECC6818D107E3006F9ABC /* UIWeb1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWeb1ViewController.h; sourceTree = "<group>"; };
 		564ECC6918D107E3006F9ABC /* UIWeb1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWeb1ViewController.m; sourceTree = "<group>"; };
-		5652C7B318FEF8DE00F55DBA /* Main_iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone35.storyboard; sourceTree = "<group>"; };
 		567B0A0E18999E4C000B0833 /* SWCAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWCAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B0A1118999E4C000B0833 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		567B0A1318999E4C000B0833 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,7 +58,7 @@
 		567B0A1F18999E4C000B0833 /* SWCAC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SWCAC-Prefix.pch"; sourceTree = "<group>"; };
 		567B0A2018999E4C000B0833 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		567B0A2118999E4C000B0833 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		567B0A2418999E4C000B0833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone4.storyboard; sourceTree = "<group>"; };
+		567B0A2418999E4C000B0833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		567B0A2718999E4C000B0833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		567B0A2918999E4C000B0833 /* ConferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConferenceViewController.h; sourceTree = "<group>"; };
 		567B0A2A18999E4C000B0833 /* ConferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceViewController.m; sourceTree = "<group>"; };
@@ -141,10 +142,9 @@
 			children = (
 				567B0A2018999E4C000B0833 /* AppDelegate.h */,
 				567B0A2118999E4C000B0833 /* AppDelegate.m */,
-				567B0A2318999E4C000B0833 /* Main_iPhone4.storyboard */,
-				5652C7B318FEF8DE00F55DBA /* Main_iPhone35.storyboard */,
+				567B0A2318999E4C000B0833 /* Main_iPhone.storyboard */,
 				567B0A2618999E4C000B0833 /* Main_iPad.storyboard */,
-				56C902F518F4867C00F98D98 /* Controllers */,
+				56C902F518F4867C00F98D98 /* Classes */,
 				567B0A2F18999E4C000B0833 /* Images.xcassets */,
 				567B0A1818999E4C000B0833 /* Supporting Files */,
 			);
@@ -180,7 +180,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		56C902F518F4867C00F98D98 /* Controllers */ = {
+		56C902F518F4867C00F98D98 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				567B0A2918999E4C000B0833 /* ConferenceViewController.h */,
@@ -197,8 +197,10 @@
 				56C902F718F48A8400F98D98 /* UIViewControllerLinks.m */,
 				5693B19118FC4F2000B25AA2 /* HotelViewController.h */,
 				5693B19218FC4F2000B25AA2 /* HotelViewController.m */,
+				563965F71925207E007DE160 /* ModalViewController.h */,
+				563965F81925207E007DE160 /* ModalViewController.m */,
 			);
-			name = Controllers;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +288,8 @@
 			files = (
 				567B0A2818999E4C000B0833 /* Main_iPad.storyboard in Resources */,
 				567B0A3018999E4C000B0833 /* Images.xcassets in Resources */,
-				567B0A2518999E4C000B0833 /* Main_iPhone4.storyboard in Resources */,
+				567B0A2518999E4C000B0833 /* Main_iPhone.storyboard in Resources */,
 				567B0A1C18999E4C000B0833 /* InfoPlist.strings in Resources */,
-				5652C7B418FEF8DE00F55DBA /* Main_iPhone35.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +311,7 @@
 			files = (
 				56C902F818F48A8400F98D98 /* UIViewControllerLinks.m in Sources */,
 				567B0A2E18999E4C000B0833 /* CampusViewController.m in Sources */,
+				563965F91925207E007DE160 /* ModalViewController.m in Sources */,
 				56FAB3011899E947009274A8 /* TableViewController.m in Sources */,
 				5693B19318FC4F2000B25AA2 /* HotelViewController.m in Sources */,
 				567B0A2218999E4C000B0833 /* AppDelegate.m in Sources */,
@@ -347,12 +349,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		567B0A2318999E4C000B0833 /* Main_iPhone4.storyboard */ = {
+		567B0A2318999E4C000B0833 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				567B0A2418999E4C000B0833 /* Base */,
 			);
-			name = Main_iPhone4.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		567B0A2618999E4C000B0833 /* Main_iPad.storyboard */ = {
@@ -455,6 +457,7 @@
 				GCC_PREFIX_HEADER = "SWCAC/SWCAC-Prefix.pch";
 				INFOPLIST_FILE = "SWCAC/SWCAC-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -468,6 +471,7 @@
 				GCC_PREFIX_HEADER = "SWCAC/SWCAC-Prefix.pch";
 				INFOPLIST_FILE = "SWCAC/SWCAC-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
