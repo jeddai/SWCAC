@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -113,6 +113,7 @@
                                 <items>
                                     <navigationItem title="App Information" id="UIZ-NA-WOM">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="HtH-b5-QX6">
+                                            <color key="tintColor" red="0.45151251580000001" green="0.0" blue="0.67851987089999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="Close:" destination="ugd-df-bRz" id="Qph-pn-7Ug"/>
                                             </connections>
@@ -241,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="1179" y="522"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Info View Controller-->
         <scene sceneID="dbH-fl-fyR">
             <objects>
-                <viewController id="PyC-u6-6pr" sceneMemberID="viewController">
+                <viewController id="PyC-u6-6pr" customClass="MapInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nN4-ro-PaJ"/>
                         <viewControllerLayoutGuide type="bottom" id="nGm-wd-1Q3"/>
@@ -268,11 +269,6 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ImN-y8-5ss" customClass="UISwitchColorChange">
-                                                <rect key="frame" x="251" y="20" width="51" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="onTintColor" red="0.45151251580000001" green="0.0" blue="0.67851987089999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </switch>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended Restaurants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwM-qS-DQh">
                                                 <rect key="frame" x="20" y="25" width="215" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -283,6 +279,9 @@
                                                 <rect key="frame" x="251" y="77" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="onTintColor" red="0.45151251580000001" green="0.0" blue="0.67851987089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="toggleAttractions:" destination="PyC-u6-6pr" eventType="valueChanged" id="Sf3-cF-Qcs"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tourist Attractions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJl-Ep-Mmp">
                                                 <rect key="frame" x="20" y="82" width="139" height="21"/>
@@ -290,6 +289,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NaH-qn-5Th">
+                                                <rect key="frame" x="251" y="20" width="51" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="onTintColor" red="0.45151251580000001" green="0.0" blue="0.67851987089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="toggleRestaurants:" destination="PyC-u6-6pr" eventType="valueChanged" id="8VX-Sp-wKd"/>
+                                                </connections>
+                                            </switch>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
@@ -314,6 +321,10 @@
                             <constraint firstAttribute="trailing" secondItem="ygN-hJ-m3m" secondAttribute="trailing" id="tQx-as-KAT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Switch1" destination="NaH-qn-5Th" id="C42-f9-zzf"/>
+                        <outlet property="Switch2" destination="AIM-c4-pc8" id="oom-Fi-KIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfY-Yb-dx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,7 +482,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-q9-F4q">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-q9-F4q">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
@@ -493,7 +504,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                <tabBarController id="8YX-ce-x5E" customClass="TabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7CF-by-oac"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
