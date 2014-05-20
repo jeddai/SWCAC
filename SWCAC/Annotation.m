@@ -11,5 +11,4 @@
 @implementation Annotation
 @synthesize coordinate, title, subtitle;
 
-
 @end

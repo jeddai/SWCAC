@@ -12,12 +12,17 @@
 {
     IBOutlet UISwitch *Switch1;
     IBOutlet UISwitch *Switch2;
+    IBOutlet UISwitch *Switch3;
 }
 
 @property (nonatomic, retain) IBOutlet UISwitch *Switch1;
 @property (nonatomic, retain) IBOutlet UISwitch *Switch2;
+@property (nonatomic, retain) IBOutlet UISwitch *Switch3;
+
 
 - (IBAction)toggleRestaurants:(id)sender;
 - (IBAction)toggleAttractions:(id)sender;
+- (IBAction)toggleConference:(id)sender;
+
 
 @end

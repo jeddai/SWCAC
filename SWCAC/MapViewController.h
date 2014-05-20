@@ -10,16 +10,18 @@
 #import <MapKit/MapKit.h>
 #import "MapInfoViewController.h"
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate>
 {
     MKMapView *mapView;
     BOOL *restaurants;
     BOOL *tourists;
+    BOOL *conference;
 }
 
--(void)addRestaurants;
--(void)removeRestaurants;
--(void)addTourist;
--(void)removeTourist;
+@property(nonatomic, retain) MKMapView *mapView;
+
+-(void)toggleRestaurants:(BOOL *)on;
+-(void)toggleTourist:(BOOL *)on;
+-(void)toggleConference:(BOOL *)on;
 
 @end

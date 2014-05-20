@@ -15,7 +15,7 @@
 @end
 
 @implementation MapInfoViewController
-@synthesize Switch1, Switch2;
+@synthesize Switch1, Switch2, Switch3;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,8 +30,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    Switch1.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"switch1Value"];
-    Switch2.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"switch2Value"];
+    Switch1.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"switch1Val"];
+    Switch2.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"switch2Val"];
+    Switch3.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"switch3Val"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,32 +44,28 @@
 - (IBAction)toggleRestaurants:(id)sender
 {
     MapViewController *mapView = [[MapViewController alloc] init];
-    if (Switch1.on)
-    {
-        [mapView addRestaurants];
-    }
-    else
-    {
-        [mapView removeRestaurants];
-    }
-    [[NSUserDefaults standardUserDefaults] setBool:Switch1.on forKey:@"switch1Value"];
+    [mapView toggleRestaurants:Switch1.on];
+    [[NSUserDefaults standardUserDefaults] setBool:Switch1.on forKey:@"switch1Val"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (IBAction)toggleAttractions:(id)sender
 {
     MapViewController *mapView = [[MapViewController alloc] init];
-    if (Switch2.on)
-    {
-        [mapView addTourist];
-    }
-    else
-    {
-        [mapView removeTourist];
-    }
-    [[NSUserDefaults standardUserDefaults] setBool:Switch2.on forKey:@"switch2Value"];
+    [mapView toggleTourist:Switch2.on];
+    [[NSUserDefaults standardUserDefaults] setBool:Switch2.on forKey:@"switch2Val"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+- (IBAction)toggleConference:(id)sender
+{
+    MapViewController *mapView = [[MapViewController alloc] init];
+    [mapView toggleConference:Switch3.on];
+    [[NSUserDefaults standardUserDefaults] setBool:Switch3.on forKey:@"switch3Val"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
 
 /*
 #pragma mark - Navigation
