@@ -32,6 +32,7 @@
 		568EDA5B19266EC200EB12D8 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 568EDA5A19266EC200EB12D8 /* Annotation.m */; };
 		568EDA5E1926752D00EB12D8 /* MapInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568EDA5D1926752D00EB12D8 /* MapInfoViewController.m */; };
 		5693B19318FC4F2000B25AA2 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5693B19218FC4F2000B25AA2 /* HotelViewController.m */; };
+		56B06D59192BBA7E0085DA45 /* AnnotationCalloutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B06D58192BBA7E0085DA45 /* AnnotationCalloutViewController.m */; };
 		56C902F818F48A8400F98D98 /* UIViewControllerLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C902F718F48A8400F98D98 /* UIViewControllerLinks.m */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,8 @@
 		568EDA5D1926752D00EB12D8 /* MapInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfoViewController.m; sourceTree = "<group>"; };
 		5693B19118FC4F2000B25AA2 /* HotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelViewController.h; sourceTree = "<group>"; };
 		5693B19218FC4F2000B25AA2 /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
+		56B06D57192BBA7E0085DA45 /* AnnotationCalloutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationCalloutViewController.h; sourceTree = "<group>"; };
+		56B06D58192BBA7E0085DA45 /* AnnotationCalloutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationCalloutViewController.m; sourceTree = "<group>"; };
 		56C902F618F48A8400F98D98 /* UIViewControllerLinks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerLinks.h; sourceTree = "<group>"; };
 		56C902F718F48A8400F98D98 /* UIViewControllerLinks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerLinks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +189,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		56B06D5A192BBA890085DA45 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				567B0A641899C855000B0833 /* MapViewController.h */,
+				567B0A651899C855000B0833 /* MapViewController.m */,
+				568EDA5919266EC200EB12D8 /* Annotation.h */,
+				568EDA5A19266EC200EB12D8 /* Annotation.m */,
+				568EDA5C1926752D00EB12D8 /* MapInfoViewController.h */,
+				568EDA5D1926752D00EB12D8 /* MapInfoViewController.m */,
+				56B06D57192BBA7E0085DA45 /* AnnotationCalloutViewController.h */,
+				56B06D58192BBA7E0085DA45 /* AnnotationCalloutViewController.m */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
 		56C902F518F4867C00F98D98 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,12 +211,7 @@
 				567B0A2A18999E4C000B0833 /* ConferenceViewController.m */,
 				567B0A2C18999E4C000B0833 /* CampusViewController.h */,
 				567B0A2D18999E4C000B0833 /* CampusViewController.m */,
-				567B0A641899C855000B0833 /* MapViewController.h */,
-				567B0A651899C855000B0833 /* MapViewController.m */,
-				568EDA5919266EC200EB12D8 /* Annotation.h */,
-				568EDA5A19266EC200EB12D8 /* Annotation.m */,
-				568EDA5C1926752D00EB12D8 /* MapInfoViewController.h */,
-				568EDA5D1926752D00EB12D8 /* MapInfoViewController.m */,
+				56B06D5A192BBA890085DA45 /* MapView */,
 				564ECC6818D107E3006F9ABC /* UIWeb1ViewController.h */,
 				564ECC6918D107E3006F9ABC /* UIWeb1ViewController.m */,
 				56C902F618F48A8400F98D98 /* UIViewControllerLinks.h */,
@@ -322,6 +335,7 @@
 				56C902F818F48A8400F98D98 /* UIViewControllerLinks.m in Sources */,
 				567B0A2E18999E4C000B0833 /* CampusViewController.m in Sources */,
 				563965F91925207E007DE160 /* ModalViewController.m in Sources */,
+				56B06D59192BBA7E0085DA45 /* AnnotationCalloutViewController.m in Sources */,
 				5693B19318FC4F2000B25AA2 /* HotelViewController.m in Sources */,
 				565C8775192534CA00F6AF3F /* TabBarController.m in Sources */,
 				568EDA5B19266EC200EB12D8 /* Annotation.m in Sources */,

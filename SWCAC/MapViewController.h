@@ -13,9 +13,10 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 {
     MKMapView *mapView;
-    BOOL *restaurants;
-    BOOL *tourists;
-    BOOL *conference;
+    Boolean *restaurants;
+    Boolean *tourists;
+    Boolean *conference;
+    Boolean *animate;
 }
 
 @property(nonatomic, retain) MKMapView *mapView;

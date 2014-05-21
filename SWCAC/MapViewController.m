@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "Annotation.h"
 #import "MapInfoViewController.h"
+#import "AnnotationCalloutViewController.h"
 
 @interface MapViewController ()
 
@@ -34,33 +35,51 @@
     mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     mapView.mapType = MKMapTypeStandard;
     
-    CLLocationCoordinate2D coord = {.latitude =  36.1866405, .longitude =  -86.7852454};
-    MKCoordinateSpan span = {.latitudeDelta =  0.1, .longitudeDelta =  0.1};
+    CLLocationCoordinate2D coord = {.latitude =  36.105636, .longitude =  -86.80006};
+    MKCoordinateSpan span = {.latitudeDelta =  0.15, .longitudeDelta =  0.15};
     MKCoordinateRegion region = {coord, span};
     
     [mapView setRegion:region];
     [mapView setDelegate:self];
+    [mapView setShowsUserLocation:YES];
     [self.view addSubview:mapView];
     
     restaurants = NO;
     tourists = NO;
+    animate = (Boolean *) YES;
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+- (MKAnnotationView *)mapView:(MKMapView *)annotMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    MKPinAnnotationView *MyPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
-    MyPin.pinColor = MKPinAnnotationColorPurple;
-    
-    UIButton *advertButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [advertButton addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
-    
-    MyPin.rightCalloutAccessoryView = advertButton;
-    MyPin.draggable = NO;
-    MyPin.highlighted = YES;
-    MyPin.animatesDrop = TRUE;
-    MyPin.canShowCallout = YES;
-    
-    return MyPin;
+    if (annotation == annotMapView.userLocation)
+    {
+        return nil;
+    }
+    else
+    {
+        MKPinAnnotationView *MyPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
+        MyPin.pinColor = MKPinAnnotationColorPurple;
+        
+        UIButton *advertButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [advertButton addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
+        
+        MyPin.rightCalloutAccessoryView = advertButton;
+        MyPin.draggable = NO;
+        MyPin.highlighted = YES;
+        MyPin.animatesDrop = animate;
+        MyPin.canShowCallout = YES;
+        
+        return MyPin;
+    }
+}
+
+-(void)button:(id)sender
+{
+    AnnotationCalloutViewController *newView = (AnnotationCalloutViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"AnnotCallout"];
+    Annotation *ann = [mapView.selectedAnnotations objectAtIndex:0];
+    newView.locationTitle = ann.title;
+    newView.index = (NSInteger *) ann.index;//(NSInteger *) [mapView.annotations indexOfObject:[mapView.selectedAnnotations objectAtIndex:0]];
+    [self.navigationController pushViewController:newView animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,6 +97,7 @@
     ann.coordinate = location;
     ann.title = @"Lipscomb University";
     ann.subtitle = @"Home of the Bisons";
+    ann.index = (NSInteger *) 0;
     [touristLocations addObject:ann];
     
 //  Pancake Pantry
@@ -87,6 +107,7 @@
     ann.coordinate = location;
     ann.title = @"Pancake Pantry";
     ann.subtitle = @"Best Pancakes around";
+    ann.index = (NSInteger *) 1;
     [restaurantLocations addObject:ann];
     
 //  Edley's
@@ -96,6 +117,7 @@
     ann.coordinate = location;
     ann.title = @"Edley's BBQ";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 2;
     [restaurantLocations addObject:ann];
     
 //  Burger Up
@@ -105,6 +127,7 @@
     ann.coordinate = location;
     ann.title = @"Burger Up";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 3;
     [restaurantLocations addObject:ann];
     
 //  The Frothy Monkey
@@ -114,6 +137,7 @@
     ann.coordinate = location;
     ann.title = @"The Frothy Monkey Coffeehouse";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 4;
     [restaurantLocations addObject:ann];
     
 //  Las Paletas
@@ -123,6 +147,7 @@
     ann.coordinate = location;
     ann.title = @"Las Paletas";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 5;
     [restaurantLocations addObject:ann];
     
 //  Copper Kettle
@@ -132,6 +157,7 @@
     ann.coordinate = location;
     ann.title = @"Copper Kettle";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 6;
     [restaurantLocations addObject:ann];
 
 //  The Well
@@ -141,6 +167,7 @@
     ann.coordinate = location;
     ann.title = @"The Well Coffeehouse";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 7;
     [restaurantLocations addObject:ann];
 
 //  SloCo
@@ -150,6 +177,7 @@
     ann.coordinate = location;
     ann.title = @"SloCo";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 8;
     [restaurantLocations addObject:ann];
 
 //  Noodles
@@ -159,6 +187,7 @@
     ann.coordinate = location;
     ann.title = @"Noodles & Co.";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 9;
     [restaurantLocations addObject:ann];
 
 //  Panera
@@ -168,6 +197,7 @@
     ann.coordinate = location;
     ann.title = @"Panera";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 10;
     [restaurantLocations addObject:ann];
 
 //  Cheescake Factory
@@ -177,6 +207,7 @@
     ann.coordinate = location;
     ann.title = @"Cheesecake Factory";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 11;
     [restaurantLocations addObject:ann];
 
 //  Bread and Soup, Co.
@@ -186,6 +217,7 @@
     ann.coordinate = location;
     ann.title = @"Bread & Company";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 12;
     [restaurantLocations addObject:ann];
 
 //  California Pizza Kitchen
@@ -195,6 +227,7 @@
     ann.coordinate = location;
     ann.title = @"California Pizza Kitchen";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 13;
     [restaurantLocations addObject:ann];
 
 //  Chipotle
@@ -204,6 +237,7 @@
     ann.coordinate = location;
     ann.title = @"Chipotle";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 14;
     [restaurantLocations addObject:ann];
 
 //  Ruby Tuesday's
@@ -213,6 +247,7 @@
     ann.coordinate = location;
     ann.title = @"Ruby Tuesday";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 15;
     [restaurantLocations addObject:ann];
 
 //  Whole Foods
@@ -222,15 +257,17 @@
     ann.coordinate = location;
     ann.title = @"Whole Foods";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 16;
     [restaurantLocations addObject:ann];
 
 //  Zoe's
     ann = [[Annotation alloc] init];
-    location.latitude = 36.037322;
-    location.longitude = -86.798405;
+    location.latitude = 36.103605;
+    location.longitude = -86.817646;
     ann.coordinate = location;
     ann.title = @"Zoe's Kitchen";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 17;
     [restaurantLocations addObject:ann];
 
 //  Douglas Corner Cafe
@@ -240,6 +277,7 @@
     ann.coordinate = location;
     ann.title = @"Douglas Corner Cafe";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 18;
     [restaurantLocations addObject:ann];
 
 //  Zanies
@@ -249,6 +287,7 @@
     ann.coordinate = location;
     ann.title = @"Zanies Comedy Night Club";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 19;
     [restaurantLocations addObject:ann];
     
 //  Athens
@@ -258,6 +297,7 @@
     ann.coordinate = location;
     ann.title = @"Athens Family Restaurant";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 20;
     [restaurantLocations addObject:ann];
     
 //  Grimey's--Frothy Monkey
@@ -267,6 +307,7 @@
     ann.coordinate = location;
     ann.title = @"Grimey's Too";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 21;
     [restaurantLocations addObject:ann];
     
 //  Merridee's
@@ -276,6 +317,7 @@
     ann.coordinate = location;
     ann.title = @"Merridee's Breadbasket";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 22;
     [restaurantLocations addObject:ann];
     
 //  Cool Springs Mall
@@ -285,6 +327,7 @@
     ann.coordinate = location;
     ann.title = @"CoolSprings Galleria";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 23;
     [restaurantLocations addObject:ann];
     
 //  Jack's Barbecue (Broadway)
@@ -294,6 +337,7 @@
     ann.coordinate = location;
     ann.title = @"Jack's Barbecue";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 24;
     [restaurantLocations addObject:ann];
     
 //  Wild Wasabi (off Demonbruen)
@@ -303,6 +347,7 @@
     ann.coordinate = location;
     ann.title = @"Wild Wasabi";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 25;
     [restaurantLocations addObject:ann];
     
 //  The Flying Saucer
@@ -312,6 +357,7 @@
     ann.coordinate = location;
     ann.title = @"The Flying Saucer";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 26;
     [restaurantLocations addObject:ann];
     
 //  The Frist
@@ -321,30 +367,22 @@
     ann.coordinate = location;
     ann.title = @"The Frist Center";
     ann.subtitle = @"";
+    ann.index = (NSInteger *) 27;
     [touristLocations addObject:ann];
-    
-//  O'Charley's
-    ann = [[Annotation alloc] init];
-    location.latitude = 36.036895;
-    location.longitude = -86.790485;
-    ann.coordinate = location;
-    ann.title = @"O'Charley's";
-    ann.subtitle = @"";
-    [restaurantLocations addObject:ann];
     
     [mapView removeAnnotations:[mapView annotations]];
     
-    restaurants = [[NSUserDefaults standardUserDefaults] boolForKey:@"restaurantsVal"];
-    tourists = [[NSUserDefaults standardUserDefaults] boolForKey:@"touristsVal"];
-    conference = [[NSUserDefaults standardUserDefaults] boolForKey:@"conferenceVal"];
+    restaurants = (Boolean *) [[NSUserDefaults standardUserDefaults] boolForKey:@"restaurantsVal"];
+    tourists = (Boolean *) [[NSUserDefaults standardUserDefaults] boolForKey:@"touristsVal"];
+    conference = (Boolean *) [[NSUserDefaults standardUserDefaults] boolForKey:@"conferenceVal"];
     if (restaurants) [mapView addAnnotations:restaurantLocations];
     if (tourists) [mapView addAnnotations:touristLocations];
     if (conference) [mapView addAnnotations:conferenceLocations];
 }
 
--(void)button:(id)sender
+- (void)viewWillDisappear:(BOOL)animated
 {
-    NSLog(@"Button Clicked");
+    animate = (Boolean *) NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -357,13 +395,13 @@
 {
     if (on)
     {
-        restaurants = YES;
+        restaurants = (Boolean *) YES;
         [[NSUserDefaults standardUserDefaults] setBool:restaurants forKey:@"restaurantsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
     {
-        restaurants = NO;
+        restaurants = (Boolean *) NO;
         [[NSUserDefaults standardUserDefaults] setBool:restaurants forKey:@"restaurantsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
@@ -373,13 +411,13 @@
 {
     if (on)
     {
-        tourists = YES;
+        tourists = (Boolean *) YES;
         [[NSUserDefaults standardUserDefaults] setBool:tourists forKey:@"touristsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
     {
-        tourists = NO;
+        tourists = (Boolean *) NO;
         [[NSUserDefaults standardUserDefaults] setBool:tourists forKey:@"touristsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
@@ -389,13 +427,13 @@
 {
     if (on)
     {
-        conference = YES;
+        conference = (Boolean *) YES;
         [[NSUserDefaults standardUserDefaults] setBool:conference forKey:@"conferenceVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
     {
-        conference = NO;
+        conference = (Boolean *) NO;
         [[NSUserDefaults standardUserDefaults] setBool:conference forKey:@"conferenceVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }

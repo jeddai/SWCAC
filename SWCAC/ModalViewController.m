@@ -35,6 +35,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)closeWindow:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -45,10 +50,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)Close:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 @end

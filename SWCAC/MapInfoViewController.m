@@ -44,7 +44,7 @@
 - (IBAction)toggleRestaurants:(id)sender
 {
     MapViewController *mapView = [[MapViewController alloc] init];
-    [mapView toggleRestaurants:Switch1.on];
+    [mapView toggleRestaurants:(BOOL*)Switch1.on];
     [[NSUserDefaults standardUserDefaults] setBool:Switch1.on forKey:@"switch1Val"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -52,7 +52,7 @@
 - (IBAction)toggleAttractions:(id)sender
 {
     MapViewController *mapView = [[MapViewController alloc] init];
-    [mapView toggleTourist:Switch2.on];
+    [mapView toggleTourist:(BOOL*)Switch2.on];
     [[NSUserDefaults standardUserDefaults] setBool:Switch2.on forKey:@"switch2Val"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -60,12 +60,10 @@
 - (IBAction)toggleConference:(id)sender
 {
     MapViewController *mapView = [[MapViewController alloc] init];
-    [mapView toggleConference:Switch3.on];
+    [mapView toggleConference:(BOOL*)Switch3.on];
     [[NSUserDefaults standardUserDefaults] setBool:Switch3.on forKey:@"switch3Val"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-
-
 
 /*
 #pragma mark - Navigation

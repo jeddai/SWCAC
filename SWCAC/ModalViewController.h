@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ModalViewController : UIViewController
-- (IBAction)Close:(id)sender;
+- (IBAction)closeWindow:(id)sender;
 
 @end
