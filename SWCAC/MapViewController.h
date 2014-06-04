@@ -13,6 +13,9 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 {
     MKMapView *mapView;
+    NSMutableArray *restaurantLocations;
+    NSMutableArray *touristLocations;
+    NSMutableArray *conferenceLocations;
     Boolean *restaurants;
     Boolean *tourists;
     Boolean *conference;

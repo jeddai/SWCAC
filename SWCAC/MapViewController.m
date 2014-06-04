@@ -58,7 +58,10 @@
     else
     {
         MKPinAnnotationView *MyPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
-        MyPin.pinColor = MKPinAnnotationColorPurple;
+        
+        if([restaurantLocations containsObject:annotation]) MyPin.pinColor = MKPinAnnotationColorPurple;
+        else if([touristLocations containsObject:annotation]) MyPin.pinColor = MKPinAnnotationColorRed;
+        else if([conferenceLocations containsObject:annotation]) MyPin.pinColor = MKPinAnnotationColorGreen;
         
         UIButton *advertButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [advertButton addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
@@ -84,9 +87,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSMutableArray *restaurantLocations = [[NSMutableArray alloc] init];
-    NSMutableArray *touristLocations = [[NSMutableArray alloc] init];
-    NSMutableArray *conferenceLocations = [[NSMutableArray alloc] init];
+    restaurantLocations = [[NSMutableArray alloc] init];
+    touristLocations = [[NSMutableArray alloc] init];
+    conferenceLocations = [[NSMutableArray alloc] init];
     CLLocationCoordinate2D location;
     Annotation *ann;
     
@@ -98,7 +101,7 @@
     ann.title = @"Lipscomb University";
     ann.subtitle = @"Home of the Bisons";
     ann.index = (NSInteger *) 0;
-    [touristLocations addObject:ann];
+    [conferenceLocations addObject:ann];
     
 //  Pancake Pantry
     ann = [[Annotation alloc] init];
@@ -328,7 +331,7 @@
     ann.title = @"CoolSprings Galleria";
     ann.subtitle = @"";
     ann.index = (NSInteger *) 23;
-    [restaurantLocations addObject:ann];
+    [touristLocations addObject:ann];
     
 //  Jack's Barbecue (Broadway)
     ann = [[Annotation alloc] init];

@@ -293,7 +293,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AIM-c4-pc8">
                                                 <rect key="frame" x="251" y="88" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="onTintColor" red="0.45151251580000001" green="0.0" blue="0.67851987089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="onTintColor" red="0.76683508830000002" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="toggleAttractions:" destination="PyC-u6-6pr" eventType="valueChanged" id="Sf3-cF-Qcs"/>
                                                 </connections>
@@ -301,7 +301,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RyN-yV-XY2">
                                                 <rect key="frame" x="251" y="127" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="onTintColor" red="0.45151251580000001" green="0.0" blue="0.67851987089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="onTintColor" red="0.0" green="0.67851987089999999" blue="0.010898799299999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="toggleConference:" destination="PyC-u6-6pr" eventType="valueChanged" id="4AB-1D-jak"/>
                                                 </connections>
@@ -493,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yn3-iJ-46L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="2589"/>
+            <point key="canvasLocation" x="2239" y="1895"/>
         </scene>
         <!--Web1 View Controller - Browser-->
         <scene sceneID="Tbg-qw-lYK">
@@ -680,7 +680,7 @@
         <image name="TabIcon5" width="30" height="30"/>
         <image name="keynoteSpeaker" width="170" height="178"/>
     </resources>
-    <color key="tintColor" red="0.45151251579416252" green="0.0" blue="0.67851987092391308" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.45151251580000001" green="0.0" blue="0.67851987089999999" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
