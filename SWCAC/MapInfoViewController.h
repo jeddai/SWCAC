@@ -19,7 +19,6 @@
 @property (nonatomic, retain) IBOutlet UISwitch *Switch2;
 @property (nonatomic, retain) IBOutlet UISwitch *Switch3;
 
-
 - (IBAction)toggleRestaurants:(id)sender;
 - (IBAction)toggleAttractions:(id)sender;
 - (IBAction)toggleConference:(id)sender;

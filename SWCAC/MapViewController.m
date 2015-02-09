@@ -12,12 +12,11 @@
 #import "AnnotationCalloutViewController.h"
 
 @interface MapViewController ()
-
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @end
 
 @implementation MapViewController
 @synthesize mapView;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +31,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
+    mapView.showsUserLocation = YES;
+    
     mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     mapView.mapType = MKMapTypeStandard;
     
@@ -44,9 +53,19 @@
     [mapView setShowsUserLocation:YES];
     [self.view addSubview:mapView];
     
-    restaurants = NO;
-    tourists = NO;
+    conference = false;
+    restaurants = false;
+    tourists = false;
     animate = (Boolean *) YES;
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"restaurantsVal"] == NO &&
+        [[NSUserDefaults standardUserDefaults] boolForKey:@"touristsVal"] == NO &&
+        [[NSUserDefaults standardUserDefaults] boolForKey:@"conferenceVal"] == NO)
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Pin Drops" message: @"You can use the settings page to turn on pins for restaurants, conference locations, and tourism locations" delegate: self cancelButtonTitle:@"Okay" otherButtonTitles: nil, nil];
+        [alert setTag:1];
+        [alert show];
+    }
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)annotMapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -69,7 +88,7 @@
         MyPin.rightCalloutAccessoryView = advertButton;
         MyPin.draggable = NO;
         MyPin.highlighted = YES;
-        MyPin.animatesDrop = animate;
+        MyPin.animatesDrop = (BOOL)animate;
         MyPin.canShowCallout = YES;
         
         return MyPin;
@@ -375,9 +394,9 @@
     
     [mapView removeAnnotations:[mapView annotations]];
     
-    restaurants = (Boolean *) [[NSUserDefaults standardUserDefaults] boolForKey:@"restaurantsVal"];
-    tourists = (Boolean *) [[NSUserDefaults standardUserDefaults] boolForKey:@"touristsVal"];
-    conference = (Boolean *) [[NSUserDefaults standardUserDefaults] boolForKey:@"conferenceVal"];
+    restaurants = [[NSUserDefaults standardUserDefaults] boolForKey:@"restaurantsVal"];
+    tourists = [[NSUserDefaults standardUserDefaults] boolForKey:@"touristsVal"];
+    conference = [[NSUserDefaults standardUserDefaults] boolForKey:@"conferenceVal"];
     if (restaurants) [mapView addAnnotations:restaurantLocations];
     if (tourists) [mapView addAnnotations:touristLocations];
     if (conference) [mapView addAnnotations:conferenceLocations];
@@ -394,49 +413,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)toggleRestaurants:(BOOL *)on
+- (void)toggleRestaurants:(BOOL)on
 {
     if (on)
     {
-        restaurants = (Boolean *) YES;
+        restaurants = YES;
         [[NSUserDefaults standardUserDefaults] setBool:restaurants forKey:@"restaurantsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
     {
-        restaurants = (Boolean *) NO;
+        restaurants = NO;
         [[NSUserDefaults standardUserDefaults] setBool:restaurants forKey:@"restaurantsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
-- (void)toggleTourist:(BOOL *)on
+- (void)toggleTourist:(BOOL)on
 {
     if (on)
     {
-        tourists = (Boolean *) YES;
+        tourists = YES;
         [[NSUserDefaults standardUserDefaults] setBool:tourists forKey:@"touristsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
     {
-        tourists = (Boolean *) NO;
+        tourists = NO;
         [[NSUserDefaults standardUserDefaults] setBool:tourists forKey:@"touristsVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
-- (void)toggleConference:(BOOL *)on
+- (void)toggleConference:(BOOL)on
 {
     if (on)
     {
-        conference = (Boolean *) YES;
+        conference = YES;
         [[NSUserDefaults standardUserDefaults] setBool:conference forKey:@"conferenceVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
     {
-        conference = (Boolean *) NO;
+        conference = NO;
         [[NSUserDefaults standardUserDefaults] setBool:conference forKey:@"conferenceVal"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }

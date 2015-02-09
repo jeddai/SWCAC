@@ -11,6 +11,8 @@
 @interface AnnotationCalloutViewController : UIViewController
 {
     IBOutlet UIWebView *myWebView;
+    __weak IBOutlet UIActivityIndicatorView *activityIndicator;
+    __weak IBOutlet UILabel *noInfo;
 }
 @property(nonatomic, copy) NSString *locationTitle;
 @property(nonatomic) NSInteger *index;

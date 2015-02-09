@@ -10,29 +10,29 @@
 	<string>SWCAC</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>478A6615-67DA-4C7B-B94F-BA85026F8F3C</key>
+		<key>9FC8889743150E2B2722A7E895876FC4135873A0</key>
 		<string>https://github.com/jeddai/SWCAC.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SWCAC.xcodeproj/project.xcworkspace</string>
+	<string>SWCAC.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>478A6615-67DA-4C7B-B94F-BA85026F8F3C</key>
+		<key>9FC8889743150E2B2722A7E895876FC4135873A0</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jeddai/SWCAC.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>478A6615-67DA-4C7B-B94F-BA85026F8F3C</string>
+	<string>9FC8889743150E2B2722A7E895876FC4135873A0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>478A6615-67DA-4C7B-B94F-BA85026F8F3C</string>
+			<string>9FC8889743150E2B2722A7E895876FC4135873A0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SWCAC</string>
 		</dict>

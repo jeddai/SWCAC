@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HotelViewController : UIViewController
+@interface HotelViewController : UIViewController <UIActionSheetDelegate>
 
 @end

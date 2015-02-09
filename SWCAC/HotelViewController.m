@@ -44,6 +44,42 @@
     }
     
 }
+- (IBAction)map:(id)sender
+{
+    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+                            @"Open in Maps",
+                            nil];
+    popup.tag = 1;
+    [popup showInView:[UIApplication sharedApplication].keyWindow];
+}
+
+- (IBAction)phone:(id)sender
+{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = @"6152215001";
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: nil message: @"Copied to clipboard" delegate: self cancelButtonTitle:@"Okay" otherButtonTitles: nil, nil];
+    [alert setTag:1];
+    [alert show];
+}
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (popup.tag) {
+        case 1: {
+            switch (buttonIndex) {
+                case 0:
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://maps.apple.com/?qsaddr=Current+Location&daddr=36.042006,-86.780877"]];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
 
 /*
 #pragma mark - Navigation

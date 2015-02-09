@@ -10,22 +10,22 @@
 #import <MapKit/MapKit.h>
 #import "MapInfoViewController.h"
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 {
     MKMapView *mapView;
     NSMutableArray *restaurantLocations;
     NSMutableArray *touristLocations;
     NSMutableArray *conferenceLocations;
-    Boolean *restaurants;
-    Boolean *tourists;
-    Boolean *conference;
+    BOOL restaurants;
+    BOOL tourists;
+    BOOL conference;
     Boolean *animate;
 }
 
 @property(nonatomic, retain) MKMapView *mapView;
 
--(void)toggleRestaurants:(BOOL *)on;
--(void)toggleTourist:(BOOL *)on;
--(void)toggleConference:(BOOL *)on;
+-(void)toggleRestaurants:(BOOL)on;
+-(void)toggleTourist:(BOOL)on;
+-(void)toggleConference:(BOOL)on;
 
 @end

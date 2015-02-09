@@ -8,7 +8,7 @@
 
 #import "AnnotationCalloutViewController.h"
 
-@interface AnnotationCalloutViewController ()
+@interface AnnotationCalloutViewController () <UIWebViewDelegate>
 
 @end
 
@@ -28,8 +28,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    myWebView.delegate = self;
+    
     UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
     [self.view addSubview:navbar];
+    
+    noInfo.hidden = YES;
+    activityIndicator.hidden = YES;
+    
+    if(self.index == (NSInteger *) 101 || self.index == (NSInteger *) 102)
+    {
+        noInfo.hidden = NO;
+    }
+    else
+    {
+        activityIndicator.hidden = NO;
+        [activityIndicator startAnimating];
+    }
     
     NSString *title = locationTitle;
     self.navigationItem.title = title;
@@ -51,7 +67,7 @@
     else if(self.index == (NSInteger *) 13) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/103835953857404834514/about"];
     else if(self.index == (NSInteger *) 14) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/112725534674975362776/about"];
     else if(self.index == (NSInteger *) 15) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/114594787881797204603/about"];
-    else if(self.index == (NSInteger *) 16) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/112320814268436496005/about"];
+    else if(self.index == (NSInteger *) 16) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/102374884682671417868/about"];
     else if(self.index == (NSInteger *) 17) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/110981416601747095769/about"];
     else if(self.index == (NSInteger *) 18) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/101153310947285792943/about"];
     else if(self.index == (NSInteger *) 19) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/106418559379492264878/about"];
@@ -63,6 +79,13 @@
     else if(self.index == (NSInteger *) 25) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/112705408761233573264/about"];
     else if(self.index == (NSInteger *) 26) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/116503991335681550107/about"];
     else if(self.index == (NSInteger *) 27) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/107345340383374714898/about"];
+    else if(self.index == (NSInteger *) 100) websiteUrl = [NSURL URLWithString:@"http://www.lipscomb.edu/venues/ezell-center"];
+    //else if(self.index == (NSInteger *) 101) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/107345340383374714898/about"];
+    //else if(self.index == (NSInteger *) 102) websiteUrl = [NSURL URLWithString:@"https://plus.google.com/107345340383374714898/about"];
+    else if(self.index == (NSInteger *) 103) websiteUrl = [NSURL URLWithString:@"http://www.lipscomb.edu/venues/bennett-campus-center"];
+    else if(self.index == (NSInteger *) 104) websiteUrl = [NSURL URLWithString:@"http://www.lipscomb.edu/venues/allen-arena"];
+    else if(self.index == (NSInteger *) 105) websiteUrl = [NSURL URLWithString:@"http://www.lipscomb.edu/venues/swang-business-center"];
+    else if(self.index == (NSInteger *) 106) websiteUrl = [NSURL URLWithString:@"http://www.lipscomb.edu/venues/burton-center-collins-alumni-auditorium"];
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:websiteUrl];
     [myWebView loadRequest:urlRequest];
@@ -72,6 +95,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)myWebView
+{
+    if(self.index != (NSInteger *) 101 && self.index != (NSInteger *) 102)
+    {
+        activityIndicator.hidden = YES;
+        [activityIndicator stopAnimating];
+    }
 }
 
 /*
